@@ -48,7 +48,7 @@ def save():
             data.update(new_data)
             with open("data.json", "w") as data_file:
                 #saving updated data
-                json.dump(new_data, data_file, indent=4)
+                json.dump(data, data_file, indent=4)
         finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
@@ -100,3 +100,4 @@ add_button = Button(text="Add", command=save, width=36)
 add_button.grid(row=4, column=1, columnspan=1)
 
 window.mainloop()
+
